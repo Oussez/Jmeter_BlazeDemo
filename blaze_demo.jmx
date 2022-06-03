@@ -12,7 +12,7 @@
     </TestPlan>
     <hashTree>
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Flights_Page_DATA" enabled="true">
-        <stringProp name="filename">O:/PFE_Bibliothèque/Séance_4/Flights_Page.csv</stringProp>
+        <stringProp name="filename">./Flights_Page.csv</stringProp>
         <stringProp name="fileEncoding"></stringProp>
         <stringProp name="variableNames">f_port,to_port</stringProp>
         <boolProp name="ignoreFirstLine">false</boolProp>
@@ -24,7 +24,7 @@
       </CSVDataSet>
       <hashTree/>
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Achat_billet_Page_DATA" enabled="true">
-        <stringProp name="filename">O:/PFE_Bibliothèque/Séance_4/Achat_billet_page.csv</stringProp>
+        <stringProp name="filename">./Achat_billet_page.csv</stringProp>
         <stringProp name="fileEncoding"></stringProp>
         <stringProp name="variableNames">id, f_port, price, to_port, airelines</stringProp>
         <boolProp name="ignoreFirstLine">false</boolProp>
@@ -36,7 +36,7 @@
       </CSVDataSet>
       <hashTree/>
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="validation_page_DATA" enabled="true">
-        <stringProp name="filename">O:/PFE_Bibliothèque/Séance_4/validation_billet.csv</stringProp>
+        <stringProp name="filename">./validation_billet.csv</stringProp>
         <stringProp name="fileEncoding"></stringProp>
         <stringProp name="variableNames">z_code,addr,city,name_card,credit_num,card_type,credit_month,token,remember,state,credit_card,name</stringProp>
         <boolProp name="ignoreFirstLine">false</boolProp>

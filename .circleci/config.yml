@@ -1,0 +1,24 @@
+version: 2.1
+jobs:
+  Circleci-Jmeter:
+    docker:
+        - image: justb4/jmeter:latest
+    steps:
+      - checkout
+      - run:
+          name: Make folder for jmeter reports
+          command: |
+             mkdir JmeterHTML
+             mkdir JmeterCSV
+      - run: 
+          name: "Run the blazedemo Test"
+          command: jmeter -n -t ./blaze_demo.jmx -l JmeterCSV/resultBlaze.csv -e -o JmeterHTML
+             
+      - store_artifacts: # used for showing (in console ) the folders declared in path 
+          path: JmeterHTML
+      - store_artifacts: # used for showing (in console ) the folders declared in path 
+          path: JmeterCSV
+workflows:
+  Circleci-Jmeter-workflow:
+    jobs:
+      - Circleci-Jmeter
