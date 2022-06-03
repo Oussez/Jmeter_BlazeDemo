@@ -10,7 +10,7 @@ jobs:
           command: mkdir jmeterResults
       - run: 
           name: "Run the blazedemo Test"
-          command: jmeter -n -t ./Blazedemo1.jmx -l jmeterResults/resultBlaze.csv -e -o jmeterResults
+          command: jmeter -n -t ./BLazedemo1.jmx -l jmeterResults/resultBlaze.csv -e -o jmeterResults
       - store_artifacts:
           path: results
 workflows:
