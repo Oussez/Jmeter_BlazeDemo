@@ -1,0 +1,19 @@
+version: 2.1
+jobs:
+  Circleci-Jmeter:
+    docker:
+      - image: justb4/jmeter:latest
+    steps:
+      - checkout
+      - run:
+          name: Make Results REPO
+          command: mkdir jmeterResults
+      - run: 
+          name: "Run the blazedemo Test"
+          command: jmeter -n -t ./Blazedemo1.jmx -l jmeterResults/resultBlaze.csv -e -o jmeterResults
+      - store_artifacts:
+          path: results
+workflows:
+  Circleci-Jmeter-workflow:
+    jobs:
+      - Circleci-Jmeter
