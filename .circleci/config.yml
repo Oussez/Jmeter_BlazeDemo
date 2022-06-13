@@ -6,18 +6,18 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Make Results REPO
+          name: Make folder for jmeter reports
           command: |
-           mkdir HTMLrepports
-           mkdir jmeterResults
+              mkdir JmeterHTML
+              mkdir JmeterCSV
       - run: 
           name: "Run the blazedemo Test"
-          command: jmeter -n -t ./BLazedemo1.jmx -l jmeterResults/resultBlaze.csv -e -o ./HTMLrepports
-             
-      - store_artifacts:
-          path: jmeterResults
-      - store_artifacts:
-          path: HTMLrepports
+          command: jmeter -n -t ./BlazeDEMO.jmx -l ./JmeterCSV/resultBlaze.csv -e -o ./JmeterHTML
+
+      - store_artifacts: # used for showing (in console ) the folders declared in path 
+          path: jmeterCSV
+      - store_artifacts: # used for showing (in console ) the folders declared in path 
+          path: JmeterHTML
 workflows:
   Circleci-Jmeter-workflow:
     jobs:

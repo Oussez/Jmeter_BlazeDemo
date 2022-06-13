@@ -1,0 +1,10 @@
+<*> Objectif : Tester le site suivant :https://blazedemo.com/
+
+--> Fichier de jmeter test : blaze_demo.jmx
+
+=====Expliquation
+
+Match No.(0 for Random): prend 3 valeurs
+		0 : il prend des valeurs aléatoires
+		i >0 : il prend la valeur qui corresspond au regular expression selon sa position
+		-1 : il prend tous les valeurs 
